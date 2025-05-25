@@ -1,4 +1,4 @@
-## ১. PostgreSQL কী?
+## ১. What is PostgreSQL? | PostgreSQL কী?
 
 **PostgreSQL** একটি শক্তিশালী, ওপেন সোর্স **রিলেশনাল ডাটাবেজ ম্যানেজমেন্ট সিস্টেম (RDBMS)**, যা SQL (Structured Query Language) ব্যবহার করে ডাটা ম্যানিপুলেশন এবং ম্যানেজমেন্ট করে। এটি ACID (Atomicity, Consistency, Isolation, Durability) কমপ্লায়েন্ট, অর্থাৎ ডাটা ইন্টিগ্রিটি এবং ট্রানজেকশন সেফটি নিশ্চিত করে।
 
@@ -21,7 +21,7 @@ CREATE TABLE students (
 );
 ```
 
-## ২. LIMIT এবং OFFSET ক্লজ কী কাজে লাগে?
+## ২. What are the LIMIT and OFFSET clauses used for? | LIMIT এবং OFFSET ক্লজ কী কাজে লাগে?
 **LIMIT** ক্লজ ব্যবহার করে কোয়েরির ফলাফলের সীমিত সংখ্যক রো (row) ফেরত নেওয়া যায়। এটি পেজিনেশনে (Pagination) ব্যবহৃত হয়।
 **সিনট্যাক্স:**
 ```
@@ -43,7 +43,7 @@ SELECT * FROM table_name LIMIT number OFFSET number;
 SELECT * FROM students LIMIT 5 OFFSET 5;
 ```
 
-## ৩. JOIN অপারেশন কী এবং এটি PostgreSQL-এ কীভাবে কাজ করে?
+## ৩. What is the significance of the JOIN operation, and how does it work in PostgreSQL? | JOIN অপারেশন কী এবং এটি PostgreSQL-এ কীভাবে কাজ করে?
 **JOIN** হল এমন একটি অপারেশন যা দুটি বা ততোধিক টেবিলকে একটি নির্দিষ্ট সম্পর্ক (common field) এর মাধ্যমে সংযুক্ত করে ডেটা রিটার্ন করে।
 
 **JOIN-এর ধরণসমূহ:**
@@ -167,7 +167,7 @@ ON students.dept_id = departments.id;
 | `FULL OUTER JOIN` | উভয় টেবিলের সব রেকর্ড, মিল না থাকলে NULL দেখায়।    |
 ```
 
-## ৪. GROUP BY ক্লজ কী এবং এটি অ্যাগ্রিগেশন অপারেশনে কীভাবে কাজ করে?
+## ৪. Explain the GROUP BY clause and its role in aggregation operations. | GROUP BY ক্লজ কী এবং এটি অ্যাগ্রিগেশন অপারেশনে কীভাবে কাজ করে?
 **GROUP BY** ক্লজ ব্যবহার করা হয় তখন, যখন আমরা ডেটাকে কোনো নির্দিষ্ট কলামের ভিত্তিতে ভাগ করে প্রতিটি গ্রুপের উপর অ্যাগ্রিগেট ফাংশন (যেমন COUNT, SUM, AVG) প্রয়োগ করতে চাই।
 
 **উদাহরণ:**
@@ -181,7 +181,7 @@ GROUP BY product_id;
 **কার্যকারিতা:** GROUP BY ক্লজ ছাড়া আমরা অ্যাগ্রিগেট ফলাফল বিশ্লেষণ করতে পারি না, যেমন— প্রতিটি বিভাগের গড় সিজিপিএ, প্রতিটি শহরের মোট গ্রাহক ইত্যাদি।
 
 
-## ৫. PostgreSQL-এ অ্যাগ্রিগেট ফাংশন (COUNT(), SUM(), AVG()) কিভাবে কাজ করে?
+## ৫. How can you calculate aggregate functions like COUNT(), SUM(), and AVG() in PostgreSQL? | PostgreSQL-এ অ্যাগ্রিগেট ফাংশন (COUNT(), SUM(), AVG()) কিভাবে কাজ করে?
 **PostgreSQL** অ্যাগ্রিগেট ফাংশন ব্যবহারের মাধ্যমে আমরা নির্দিষ্ট কলামের উপর ভিত্তি করে গণনামূলক বিশ্লেষণ করতে পারি।
 
 **COUNT():**
